@@ -1,0 +1,44 @@
+{
+  "name": "betze-matchday",
+  "version": "1.0.0",
+  "description": "Expo (React Native) Fan- & Stadion-App für 1. FC Kaiserslautern",
+  "main": "expo-router/build/main.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "build": "eas build",
+    "preview": "eas build --platform ios --build-type preview",
+    "submit": "eas submit",
+    "lint": "eslint . --ext .ts,.tsx",
+    "type-check": "tsc --noEmit",
+    "dev": "expo start --dev-client"
+  },
+  "dependencies": {
+    "expo": "^51.0.0",
+    "expo-router": "^3.5.0",
+    "expo-location": "^17.0.0",
+    "expo-notifications": "^0.28.0",
+    "expo-constants": "^16.0.0",
+    "react": "18.2.0",
+    "react-native": "0.74.0",
+    "react-native-maps": "^1.10.0",
+    "@supabase/supabase-js": "^2.43.0",
+    "@supabase/auth-helpers-react-native": "^0.2.0",
+    "zustand": "^4.4.0",
+    "typescript": "^5.3.0",
+    "@types/react": "^18.2.0",
+    "@types/react-native": "^0.73.0",
+    "async-storage": "@react-native-async-storage/async-storage@^1.21.0",
+    "axios": "^1.6.0",
+    "date-fns": "^2.30.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "eslint": "^8.50.0",
+    "eslint-config-universe": "^12.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  }
+}
