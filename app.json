@@ -3,13 +3,26 @@
     "name": "Betze Matchday",
     "slug": "betze-matchday",
     "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FF4444"
+    },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTabletMode": true,
+      "supportsTabletMode": false,
       "bundleIdentifier": "com.betzematchday.app",
-      "buildNumber": "1"
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "We need your location to detect when you're at the stadium",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "We need your location for stadium checkins",
+        "UIRequiredDeviceCapabilities": ["gps"]
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -17,27 +30,30 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.betzematchday.app",
-      "versionCode": 1
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ]
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
     },
     "scheme": "betze",
     "plugins": [
       [
         "expo-location",
         {
-          "locationAlwaysAndWhenInUsePermission": "Allow Betze to access your location."
+          "locationAlwaysAndWhenInUsePermission": "Allow Betze to access your location for stadium checkins."
         }
       ],
       [
         "expo-notifications",
         {
           "icon": "./assets/notification-icon.png",
-          "color": "#ffffff",
-          "sounds": [
-            "./assets/notification-sound.wav"
-          ],
+          "color": "#FF4444",
+          "sounds": ["./assets/notification-sound.wav"],
           "modes": "default"
         }
       ]
@@ -46,6 +62,7 @@
       "eas": {
         "projectId": "your-eas-project-id"
       }
-    }
+    },
+    "runtimeVersion": "1.0.0"
   }
 }
